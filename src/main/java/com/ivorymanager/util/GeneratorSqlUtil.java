@@ -1,4 +1,4 @@
-package com.ego.util;
+package com.ivorymanager.util;
 
 import org.mybatis.generator.api.MyBatisGenerator;
 import org.mybatis.generator.config.Configuration;
