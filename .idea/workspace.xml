@@ -83,7 +83,7 @@
       <workItem from="1592037421005" duration="315000" />
       <workItem from="1592037751973" duration="1015000" />
       <workItem from="1592273406172" duration="6388000" />
-      <workItem from="1592454591930" duration="2328000" />
+      <workItem from="1592454591930" duration="3162000" />
     </task>
     <task id="LOCAL-00001" summary="1.加表加字段的代码生成器">
       <created>1592452068926</created>
@@ -92,7 +92,14 @@
       <option name="project" value="LOCAL" />
       <updated>1592452068926</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="1.加表加字段的代码生成器">
+      <created>1592457091837</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1592457091837</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -120,14 +127,18 @@
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="733" y="403" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.2560.1400@0.0.2560.1400" timestamp="1592291326543" />
-    <state x="1395" y="377" key="CommitChangelistDialog2" timestamp="1592452064918">
+    <state x="121" y="377" width="2074" height="818" key="CommitChangelistDialog2" timestamp="1592457090495">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="1395" y="377" key="CommitChangelistDialog2/0.0.2560.1400@0.0.2560.1400" timestamp="1592452064917" />
+    <state x="121" y="377" width="2074" height="818" key="CommitChangelistDialog2/0.0.2560.1400@0.0.2560.1400" timestamp="1592457090495" />
     <state x="1345" y="468" key="FileChooserDialogImpl" timestamp="1592457013425">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="1345" y="468" key="FileChooserDialogImpl/0.0.2560.1400@0.0.2560.1400" timestamp="1592457013425" />
+    <state x="1829" y="528" key="Github.ShareDialog" timestamp="1592457156876">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="1829" y="528" key="Github.ShareDialog/0.0.2560.1400@0.0.2560.1400" timestamp="1592457156876" />
     <state width="680" height="227" key="GridCell.Tab.0.bottom" timestamp="1592453196761">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
