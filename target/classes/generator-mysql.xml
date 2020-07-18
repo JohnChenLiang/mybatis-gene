@@ -76,7 +76,7 @@
 
        创建查询对象   enableCountByExample
         -->
-        <table tableName="t_spend" domainObjectName="Spend"
+        <table tableName="t_spend_picture" domainObjectName="SpendPicture"
 
                enableCountByExample="true" enableDeleteByExample="true"
                enableSelectByExample="true" enableUpdateByExample="true">
