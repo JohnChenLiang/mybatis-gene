@@ -1,13 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="4f0dc3fb-2280-4428-af49-0a2e3ce4d45c" name="Default Changelist" comment="1.test">
+      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ivorymanager/mapper/SpendMapper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ivorymanager/pojo/Spend.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ivorymanager/pojo/SpendExample.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ivorymanager/xml/SpendMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ivorymanager/mapper/SpendPictureMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ivorymanager/pojo/SpendPicture.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ivorymanager/pojo/SpendPictureExample.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ivorymanager/util/GeneratorSqlUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ivorymanager/util/GeneratorSqlUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ivorymanager/xml/SpendPictureMapper.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/generator-mysql.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/generator-mysql.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/mbatis-generator.kotlin_module" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/ivorymanager/util/GeneratorSqlUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ivorymanager/util/GeneratorSqlUtil.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/generator-mysql.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/generator-mysql.xml" afterDir="false" />
     </list>
@@ -20,6 +29,10 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="UPDATE_TYPE" value="MERGE" />
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/src/main/resources/generator-mysql.xml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/main/java/com/ivorymanager/util/GeneratorSqlUtil.java" root0="FORCE_HIGHLIGHTING" />
+  </component>
   <component name="MavenRunner">
     <option name="skipTests" value="true" />
   </component>
@@ -27,14 +40,15 @@
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="TODO_SCOPE" value="All Places" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Downloads/logging-log4j2-log4j-2.15.0-rc2" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -44,12 +58,12 @@
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
-    <property name="settings.editor.selected.configurable" value="settings.github" />
+    <property name="settings.editor.selected.configurable" value="Errors" />
   </component>
   <component name="RunManager">
     <configuration name="GeneratorSqlUtil" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.ivorymanager.util.GeneratorSqlUtil" />
-      <module name="mbatis-generator" />
+      <module name="mybatis-gene" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.ivorymanager.util.*" />
@@ -78,6 +92,7 @@
       </list>
     </option>
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -99,6 +114,44 @@
       <workItem from="1594349757745" duration="5013000" />
       <workItem from="1594782585872" duration="3474000" />
       <workItem from="1595064296800" duration="1081000" />
+      <workItem from="1598409868036" duration="256000" />
+      <workItem from="1623923642867" duration="1233000" />
+      <workItem from="1624866894314" duration="595000" />
+      <workItem from="1625026147399" duration="598000" />
+      <workItem from="1625123302732" duration="599000" />
+      <workItem from="1626676822383" duration="1581000" />
+      <workItem from="1626861693588" duration="594000" />
+      <workItem from="1628410316479" duration="10000" />
+      <workItem from="1628476578706" duration="596000" />
+      <workItem from="1628735082146" duration="599000" />
+      <workItem from="1629193971250" duration="594000" />
+      <workItem from="1629771522166" duration="595000" />
+      <workItem from="1629944209892" duration="595000" />
+      <workItem from="1630662948040" duration="1000" />
+      <workItem from="1630663213352" duration="608000" />
+      <workItem from="1631007065922" duration="739000" />
+      <workItem from="1631091516114" duration="1188000" />
+      <workItem from="1631610114765" duration="1195000" />
+      <workItem from="1633341856625" duration="596000" />
+      <workItem from="1634718422631" duration="1407000" />
+      <workItem from="1635045248364" duration="595000" />
+      <workItem from="1635048155005" duration="595000" />
+      <workItem from="1637310124639" duration="855000" />
+      <workItem from="1637543234651" duration="3225000" />
+      <workItem from="1637633624150" duration="595000" />
+      <workItem from="1637641855032" duration="15602000" />
+      <workItem from="1639968368511" duration="3862000" />
+      <workItem from="1640144874064" duration="597000" />
+      <workItem from="1640146835316" duration="1691000" />
+      <workItem from="1640149370574" duration="867000" />
+      <workItem from="1640153253319" duration="66964000" />
+      <workItem from="1641526377786" duration="6293000" />
+      <workItem from="1641868790973" duration="4006000" />
+      <workItem from="1642050848175" duration="593000" />
+      <workItem from="1642127219597" duration="5459000" />
+      <workItem from="1642150223523" duration="20642000" />
+      <workItem from="1644200844366" duration="596000" />
+      <workItem from="1644220762232" duration="1161000" />
     </task>
     <task id="LOCAL-00001" summary="1.加表加字段的代码生成器">
       <created>1592452068926</created>
@@ -125,70 +178,64 @@
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="COLUMN_ORDER" />
-            </State>
+            <State />
           </value>
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="1.加表加字段的代码生成器" />
     <MESSAGE value="1.test" />
     <option name="LAST_COMMIT_MESSAGE" value="1.test" />
   </component>
-  <component name="WindowStateProjectService">
-    <state x="733" y="403" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1592291326543">
-      <screen x="0" y="0" width="2560" height="1400" />
-    </state>
-    <state x="733" y="403" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.2560.1400@0.0.2560.1400" timestamp="1592291326543" />
-    <state x="169" y="249" width="2074" height="1054" key="CommitChangelistDialog2" timestamp="1592537598475">
-      <screen x="0" y="0" width="2560" height="1400" />
-    </state>
-    <state x="169" y="249" width="2074" height="1054" key="CommitChangelistDialog2/0.0.2560.1400@0.0.2560.1400" timestamp="1592537598475" />
-    <state x="1345" y="468" key="FileChooserDialogImpl" timestamp="1595065881945">
-      <screen x="0" y="0" width="2560" height="1400" />
-    </state>
-    <state x="1345" y="468" key="FileChooserDialogImpl/0.0.2560.1400@0.0.2560.1400" timestamp="1595065881945" />
-    <state x="1509" y="504" width="306" height="290" key="Github.ShareDialog" timestamp="1592535782060">
-      <screen x="0" y="0" width="2560" height="1400" />
-    </state>
-    <state x="1509" y="504" width="306" height="290" key="Github.ShareDialog/0.0.2560.1400@0.0.2560.1400" timestamp="1592535782060" />
-    <state width="1858" height="237" key="GridCell.Tab.0.bottom" timestamp="1595064262980">
-      <screen x="0" y="0" width="2560" height="1400" />
-    </state>
-    <state width="1858" height="237" key="GridCell.Tab.0.bottom/0.0.2560.1400@0.0.2560.1400" timestamp="1595064262980" />
-    <state width="1858" height="237" key="GridCell.Tab.0.center" timestamp="1595064262979">
-      <screen x="0" y="0" width="2560" height="1400" />
-    </state>
-    <state width="1858" height="237" key="GridCell.Tab.0.center/0.0.2560.1400@0.0.2560.1400" timestamp="1595064262979" />
-    <state width="1858" height="237" key="GridCell.Tab.0.left" timestamp="1595064262978">
-      <screen x="0" y="0" width="2560" height="1400" />
-    </state>
-    <state width="1858" height="237" key="GridCell.Tab.0.left/0.0.2560.1400@0.0.2560.1400" timestamp="1595064262978" />
-    <state width="1858" height="237" key="GridCell.Tab.0.right" timestamp="1595064262979">
-      <screen x="0" y="0" width="2560" height="1400" />
-    </state>
-    <state width="1858" height="237" key="GridCell.Tab.0.right/0.0.2560.1400@0.0.2560.1400" timestamp="1595064262979" />
-    <state x="1165" y="433" key="SettingsEditor" timestamp="1595065846077">
-      <screen x="0" y="0" width="2560" height="1400" />
-    </state>
-    <state x="1165" y="433" key="SettingsEditor/0.0.2560.1400@0.0.2560.1400" timestamp="1595065846077" />
-    <state x="1429" y="518" width="793" height="536" key="Vcs.Push.Dialog.v2" timestamp="1592535822926">
-      <screen x="0" y="0" width="2560" height="1400" />
-    </state>
-    <state x="1429" y="518" width="793" height="536" key="Vcs.Push.Dialog.v2/0.0.2560.1400@0.0.2560.1400" timestamp="1592535822926" />
-    <state x="1087" y="554" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1592535658563">
-      <screen x="0" y="0" width="2560" height="1400" />
-    </state>
-    <state x="1087" y="554" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.2560.1400@0.0.2560.1400" timestamp="1592535658563" />
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/ivorymanager/util/GeneratorSqlUtil.java</url>
+          <line>551</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://C:/Program Files/Java/jdk1.8.0_231/src.zip!/java/util/Date.java</url>
+          <line>165</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/ivorymanager/util/GeneratorSqlUtil.java</url>
+          <line>447</line>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/ivorymanager/util/GeneratorSqlUtil.java</url>
+          <line>271</line>
+          <option name="timeStamp" value="18" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/ivorymanager/util/GeneratorSqlUtil.java</url>
+          <line>65</line>
+          <option name="timeStamp" value="36" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/ivorymanager/util/GeneratorSqlUtil.java</url>
+          <line>45</line>
+          <option name="timeStamp" value="37" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/mybatis_gene$GeneratorSqlUtil.ic" NAME="GeneratorSqlUtil Coverage Results" MODIFIED="1642495505653" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.ivorymanager.util.*</FILTER>
+    </SUITE>
   </component>
 </project>
