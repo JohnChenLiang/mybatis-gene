@@ -4,21 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4f0dc3fb-2280-4428-af49-0a2e3ce4d45c" name="Default Changelist" comment="1.test">
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+    <list default="true" id="4f0dc3fb-2280-4428-af49-0a2e3ce4d45c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ivorymanager/mapper/SpendPictureMapper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ivorymanager/pojo/SpendPicture.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ivorymanager/pojo/SpendPictureExample.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ivorymanager/util/GeneratorSqlUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ivorymanager/util/GeneratorSqlUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ivorymanager/xml/SpendPictureMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/generator-mysql.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/generator-mysql.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/mbatis-generator.kotlin_module" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/ivorymanager/util/GeneratorSqlUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ivorymanager/util/GeneratorSqlUtil.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/generator-mysql.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/generator-mysql.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -151,7 +138,7 @@
       <workItem from="1642127219597" duration="5459000" />
       <workItem from="1642150223523" duration="20642000" />
       <workItem from="1644200844366" duration="596000" />
-      <workItem from="1644220762232" duration="1161000" />
+      <workItem from="1644220762232" duration="2023000" />
     </task>
     <task id="LOCAL-00001" summary="1.加表加字段的代码生成器">
       <created>1592452068926</created>
@@ -174,7 +161,21 @@
       <option name="project" value="LOCAL" />
       <updated>1592535652242</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="1.打算把项目传到github">
+      <created>1644487050690</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1644487050690</updated>
+    </task>
+    <task id="LOCAL-00005" summary="1.打算把项目传到github">
+      <created>1644487155640</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1644487155640</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -195,7 +196,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="1.加表加字段的代码生成器" />
     <MESSAGE value="1.test" />
-    <option name="LAST_COMMIT_MESSAGE" value="1.test" />
+    <MESSAGE value="1.打算把项目传到github" />
+    <option name="LAST_COMMIT_MESSAGE" value="1.打算把项目传到github" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
