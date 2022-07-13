@@ -1,20 +1,72 @@
 package com.ivorymanager.util;
 
+import com.mysql.jdbc.StringUtils;
 import org.mybatis.generator.api.MyBatisGenerator;
 import org.mybatis.generator.config.Configuration;
 import org.mybatis.generator.config.xml.ConfigurationParser;
 import org.mybatis.generator.internal.DefaultShellCallback;
 
 import java.io.File;
+import java.lang.reflect.Field;
+import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
 import java.math.BigDecimal;
+import java.math.BigInteger;
 import java.time.LocalDate;
 import java.util.*;
+import java.util.concurrent.Semaphore;
 import java.util.stream.Collectors;
 
-public class GeneratorSqlUtil {
+@MyAnno
+class  Person{
+    @MyAnno(ttt = "bb")
+    private int age = 22;
+    @MyAnno
+    private void sayHello(){
+        System.out.println("Hello");
+    }
+}
 
-    public static void main(String[] args) {
+public class GeneratorSqlUtil {
+    public static void main(String[] args) throws NoSuchFieldException, InvocationTargetException, NoSuchMethodException, IllegalAccessException {
+        Person person = new Person();
+        reflectionTest(person);
+
+
         try {
+//                FooBar fooBar = new FooBar(10);
+//                new Thread(() -> {
+//                    try {
+//                        fooBar.foo();
+//                    } catch (InterruptedException e) {
+//                        e.printStackTrace();
+//                    }
+//                }).start();
+//                new Thread(() -> {
+//                    try {
+//                        fooBar.bar();
+//                    } catch (InterruptedException e) {
+//                        e.printStackTrace();
+//                    }
+//                }).start();
+
+
+
+//                RunnableDemo runnableDemo = new RunnableDemo("xxx");
+//                runnableDemo.start();
+//                fooBar.foo();
+//            ThreadDemo T1 = new ThreadDemo( "Thread-1");
+//            T1.start();
+//
+//            ThreadDemo T2 = new ThreadDemo( "Thread-2");
+//            T2.start();
+
+//            RunnableDemo R1 = new RunnableDemo( "Thread-1");
+//            R1.start();
+//
+//            RunnableDemo R2 = new RunnableDemo( "Thread-2");
+//            R2.start();
+
             List<String> warnings = new ArrayList<String>();
             boolean overwrite = true;
             File configFile = new File("src/main/resources/generator-mysql.xml");
@@ -27,18 +79,502 @@ public class GeneratorSqlUtil {
 
             System.out.println("MyBatisGenerator SUCCESS!");
 
-//            char []test = {'a','a','b','b','c','c','c'};
-//            System.out.println(compress(test));
-//            System.out.println(Arrays.toString(test));
-//            char []c = {'a','b','b','b','b','a','a'};
-//            System.out.println(compress(c));
-//            System.out.println(Arrays.toString(c));
-            char []x = {'a'};
-            System.out.println(compress(x));
-            System.out.println(Arrays.toString(x));
+
+
+            int[] aaa = {1,2,3};
+            System.out.println(plusOne(aaa));
+
+
         } catch (Exception e) {
             e.printStackTrace();
         }
+    }
+
+    public static  void reflectionTest(Object object) throws NoSuchFieldException, NoSuchMethodException, InvocationTargetException, IllegalAccessException {
+        Class c = object.getClass();
+        Field ageField = c.getDeclaredField("age");
+        ageField.setAccessible(true);
+        System.out.println(ageField.getInt(object));
+
+        Method method = c.getDeclaredMethod("sayHello");
+        method.setAccessible(true);
+        method.invoke(object);
+
+        System.out.println(c.isAnnotationPresent(MyAnno.class));
+
+        System.out.println(ageField.getDeclaredAnnotation(MyAnno.class).ttt());
+
+    }
+
+//    public int lengthOfLongestSubstring(String s) {
+//
+//    }
+
+    public int oddCells(int m, int n, int[][] indices) {
+        int [][]arr = new int[m][n];
+
+        //行加一的
+        for (int i = 0; i < indices.length; i++) {
+            for (int j = 0; j < n; j++) {
+                arr[indices[i][0]][j]++;
+            }
+        }
+
+        //列加一的
+        for (int i = 0; i < indices.length; i++) {
+            for (int j = 0; j < m; j++) {
+                arr[j][indices[i][1]]++;
+            }
+        }
+
+        int res = 0;
+        for (int i = 0; i < m; i++) {
+            for (int j = 0; j < n; j++) {
+                if (arr[i][j] % 2 == 1) res++;
+            }
+        }
+
+        return res;
+    }
+
+    public boolean isUnique(String astr) {
+        char[] ch = astr.toCharArray();
+        HashMap<Character, Integer> map = new HashMap<>();
+        for (char i : ch) {
+            if (!map.containsKey(i)) {
+                map.put(i,1);
+            }else {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    HashMap<Integer,Integer> map = new HashMap<>();
+    public boolean book(int start, int end) {
+        for (int i = start; i < end; i++) {
+//            if (map.containsKey(i)) return false;
+            if (map.get(i) != null) return false;
+        }
+        //不包含 才把这串日程加进去
+        for (int i = start; i < end; i++) {
+            map.put(i,1);
+        }
+
+        return true;
+    }
+
+//    List<Integer> list = new ArrayList<>();
+//    public boolean book(int start, int end) {
+//        List<Integer> key = new ArrayList<>();
+//        for (int i = start; i < end; i++) {
+//            if (list.contains(i)) return false;
+//            key.add(i);
+//        }
+//        //不包含 才把这串日程加进去
+//        list.addAll(key);
+//
+//        return true;
+//    }
+
+//    public int minRefuelStops(int target, int startFuel, int[][] stations) {
+//        int step = 0; //步数
+//        int end = 0; //end 表示当前能跳的边界
+//        int iMax = 0; //遍历数组时 每步能到的最远距离。
+
+
+
+//        for (int i = 0; i < nums.length-1; i++) { //假设你总是可以到达数组的最后一个位置,所以不用遍历到最后一个
+//            iMax = Math.max(iMax, i+nums[i]);
+//            if (i == end){ //遍历到当前能跳的边界时,肯定要继续跳了
+//                end = iMax;
+//                step++;
+//            }
+//        }
+//        return step;
+
+
+//        int[] dp = new int[stations.length];
+//        for (int i = 0; i < stations.length; i++) {
+//            iMax = Math.max(iMax, )
+//        }
+//    }
+
+    public static int[] plusOne(int[] digits) {
+        String numStr = "";
+        for (int i : digits) numStr = numStr + String.valueOf(i);
+        BigInteger num = new BigInteger(numStr);
+        num = num.add(new BigInteger("1"));
+        numStr = String.valueOf(num);
+        char[] ch = numStr.toCharArray();
+        int[] res = new int[ch.length];
+        for (int i = 0; i < ch.length; i++) {
+            res[i] = ch[i] -48;
+        }
+
+        return res;
+    }
+
+
+//    class Phone{
+//        String color;
+//        int price;
+//
+//        public void print(){
+//            System.out.println("Phone---" + color + "---" + price );
+//        }
+//    }
+//
+//    class Nokia extends Phone{
+//        String color = "red";
+//        int price = 1009;
+//
+//        public void ppp(){
+//            System.out.println(111111);
+//        }
+//
+//        public void aaa(){
+//            super.print();
+//            ppp();
+//            print();
+//        }
+//    }
+
+//    public String longestCommonPrefix(String[] strs) {
+//        if (strs.length == 1) return strs[0];
+//
+//        String res = "";
+//        String key = strs[0].substring(0,1);
+//
+//        for (int i = 1; i < strs.length; i++) {
+//            for (int j = 1; j < strs[i].length(); j++) {
+//                if (!key.equals(strs[i].substring(0,j)))
+//            }
+//
+//        }
+//
+//
+//
+////        char[]chFirst = strs[0].toCharArray();
+////        //sub(i)
+////        for (int i = 0; i < strs[0].length(); i++) {
+////
+////        }
+//
+//    }
+
+    public void wiggleSort(int[] nums) {
+        Arrays.sort(nums);
+
+    }
+
+    public int numWaterBottles(int numBottles, int numExchange) {
+        int drink = numBottles;
+        while (numBottles >= numExchange){
+            drink = drink + numBottles/numExchange;
+            numBottles = numBottles/numExchange + numBottles%numExchange;
+        }
+        return drink;
+    }
+
+    public int findPeakElement(int[] nums) {
+        int len = nums.length;
+        if (len == 1) return 0;
+        for (int i = 1; i < len; i++) {
+            if (nums[i] < nums[i-1]) return i-1;
+        }
+        return len - 1;
+    }
+
+    public static int missingNumber(int[] nums) {
+        int sum = (0 + nums.length + 1) * nums.length / 2;
+        for (int i : nums) sum = sum - i;
+        return sum;
+    }
+
+    public int[] exchange(int[] nums) {
+        List<Integer> jiList = new ArrayList<>();
+        List<Integer> ouList = new ArrayList<>();
+        for (int i : nums){
+            if (i % 2 == 1) jiList.add(i);
+            if (i % 2 == 0) ouList.add(i);
+        }
+        jiList.addAll(ouList);
+
+        for (int i = 0; i < nums.length; i++) {
+            nums[i] = jiList.get(i);
+        }
+        return nums;
+
+    }
+
+    public int divide(int dividend, int divisor) {
+        if (dividend == (-2147483648)) return 2147483647;
+        return dividend/divisor;
+    }
+
+    public static String defangIPaddr(String address) {
+        address.toCharArray();
+        return  address.replace(".", "[.]");
+    }
+
+    public int jump(int[] nums) {
+        //[2,3,1,1,4] 我们每次在可跳范围内选择可以使得跳的更远的位置。
+        //开始的位置是 2，然后因为 3 可以跳的更远，所以跳到 3 的位置。然后现在的位置就是 3 了，然后因为 4 可以跳的更远，所以下次跳到 4 的位置。
+
+        int step = 0; //步数
+        int end = 0; //end 表示当前能跳的边界
+        int iMax = 0; //遍历数组时 每步能到的最远距离。
+        for (int i = 0; i < nums.length-1; i++) { //假设你总是可以到达数组的最后一个位置,所以不用遍历到最后一个
+            iMax = Math.max(iMax, i+nums[i]);
+            if (i == end){ //遍历到当前能跳的边界时,肯定要继续跳了
+                end = iMax;
+                step++;
+            }
+        }
+        return step;
+
+    }
+
+    public int searchInsert(int[] nums, int target) {
+        //找到第一个大于等于target的
+        for (int i = 0; i < nums.length; i++) {
+            if (nums[i] >= target) return i;
+        }
+        return nums.length;
+
+    }
+
+    public int firstUniqChar(String s) {
+        char[] ch = s.toCharArray();
+        HashMap<Character, Integer> map = new HashMap<>();
+        for (char i : ch) map.put(i,map.getOrDefault(i,0)+1);
+
+        for (int i = 0; i < ch.length; i++) {
+            if (map.get(ch[i]) == 1) return i;
+        }
+        return -1;
+    }
+
+    public void duplicateZeros(int[] arr) {
+        List<Integer> list = new ArrayList<>();
+        for (int i : arr) {
+            list.add(i);
+            if (i == 0) list.add(0);
+        }
+
+        for (int i = 0; i < arr.length; i++) {
+            arr[i] = list.get(i);
+        }
+    }
+
+    public int findPairs(int[] nums, int k) {
+        Set<Integer> visited = new HashSet<>();
+        Set<Integer> res = new HashSet<>();
+
+        for (int i : nums){
+            if (visited.contains(i + k)) res.add(i);
+            if (visited.contains(i - k)) res.add(i-k);
+            visited.add(i);
+        }
+        return res.size();
+    }
+
+    public boolean isPowerOfTwo(int n) {
+        double num = (double) n;
+        while (num>=1){
+            if (num == 1) return true;
+            num = num / 2;
+        }
+        return false;
+    }
+
+    public static int removeElement() {
+        int key = 2;
+        for (int i = 2; i <= 10; i++) {
+            key = (key+1) *2;
+        }
+        return key;
+    }
+
+    public int[] searchRange(int[] nums, int target) {
+        int res[] = {-1, -1};
+        for (int i = 0; i < nums.length; i++) {
+            if (target == nums[i]) {
+                res[0] = i;
+                break;
+            }
+        }
+
+        for (int i = nums.length-1; i >= 0 ; i--) {
+            if (target == nums[i]) {
+                res[1] = i;
+                break;
+            }
+        }
+        return res;
+    }
+
+    public int findDuplicate(int[] nums) {
+        HashMap<Integer, Integer> map = new HashMap<>();
+        for (int i : nums){
+            if (map.containsKey(i)){
+                return i;
+            }
+            map.put(i,1);
+        }
+        return 0;
+    }
+
+    public boolean containsDuplicate(int[] nums) {
+        HashMap<Integer, Integer> map = new HashMap<>();
+        for (int i : nums) map.put(i, 1);
+        if (map.keySet().size() == nums.length) return false;
+        return true;
+    }
+
+    public List<Integer> findDisappearedNumbers(int[] nums) {
+        HashMap<Integer, Integer> map  = new HashMap<>();
+        for (int i = 1; i <= nums.length ; i++) map.put(i,1);
+        for (int i : nums) map.put(i, map.getOrDefault(i,0)+1);
+
+        List<Integer> list = new ArrayList<>();
+        for (Integer i : map.keySet()){
+            if (map.get(i) == 1) list.add(i);
+        }
+        return list;
+    }
+
+    public int numIdenticalPairs(int[] nums) {
+        int res = 0;
+        for (int i = 0; i < nums.length; i++) {
+            for (int j = i+1; j < nums.length; j++) {
+                if (nums[i] == nums[j]) res++;
+            }
+        }
+        return res;
+    }
+
+    public int repeatedNTimes(int[] nums) {
+        int len = nums.length;
+        Arrays.sort(nums);
+        return nums[len/2] == nums[len-1] ? nums[len/2] : nums[len/2-1];
+    }
+
+    public int countWords(String[] words1, String[] words2) {
+        HashMap<String,Integer> oneMap = new HashMap<>();
+        HashMap<String,Integer> twoMap = new HashMap<>();
+        for (String i : words1) oneMap.put(i,oneMap.getOrDefault(i,0)+1);
+        for (String i : words2) twoMap.put(i,twoMap.getOrDefault(i,0)+1);
+
+        Integer res = 0;
+        for (String i : oneMap.keySet()){
+            if (oneMap.get(i) == 1 && twoMap.get(i) != null && twoMap.get(i) == 1) res++;
+        }
+        return res;
+    }
+
+
+    public int numJewelsInStones(String jewels, String stones) {
+        HashMap<Character,Integer> sMap = new HashMap<>();
+        for (Character i : stones.toCharArray()) sMap.put(i,sMap.getOrDefault(i,0)+1);
+
+        Integer res = 0;
+        for (Character i : jewels.toCharArray()){
+            if (sMap.get(i) != null) res = res + sMap.get(i);
+        }
+        return res;
+    }
+
+    public int maxNumberOfBalloons(String text) {
+        HashMap<Character, Integer> bMap = new HashMap<>();
+        bMap.put('b',1);
+        bMap.put('a',1);
+        bMap.put('l',2);
+        bMap.put('o',2);
+        bMap.put('n',1);
+
+        HashMap<Character, Integer> tMap = new HashMap<>();
+        for (Character i : text.toCharArray()) tMap.put(i,tMap.getOrDefault(i,0)+1);
+
+        int res = 0;
+
+        while (res>=0){
+            for (Character i : bMap.keySet()){
+                if (tMap.get(i) == null) return res;
+                Integer temp = tMap.get(i) - bMap.get(i);
+                if (temp < 0) return res;
+                tMap.put(i,temp);
+            }
+            res++;
+        }
+        return res;
+
+    }
+
+    public static int secondHighest(String s) {
+        HashMap<Character,Integer> map = new HashMap();
+        for (Character i : s.toCharArray()) map.put(i,map.getOrDefault(i,0)+1);
+        int key = 0;
+        Character []c = {'9','8','7','6','5','4','3','2','1','0'};
+        for (Character i : c) {
+            if (map.get(i) != null && map.get(i) > 0) key++;
+            if (key==2) return i-48;
+        }
+        return -1;
+    }
+
+    public int[] intersect(int[] nums1, int[] nums2) {
+        HashMap<Integer, Integer> map1 = new HashMap<>();
+        HashMap<Integer, Integer> map2 = new HashMap<>();
+
+        for (int i : nums1) map1.put(i, map1.getOrDefault(i,0)+1);
+        for (int i : nums2) map2.put(i, map2.getOrDefault(i,0)+1);
+
+        List<Integer> list = new ArrayList<>();
+
+        for (int i : map1.keySet()){
+            if (map2.get(i) != null){
+                int minTime = map1.get(i) < map2.get(i) ? map1.get(i) : map2.get(i);
+                for (int j = 0; j < minTime; j++) list.add(i);
+            }
+        }
+
+        int []res = new int[list.size()];
+        for (int i = 0; i < list.size(); i++) res[i] = list.get(i);
+
+        return res;
+    }
+
+    public static boolean ontainsNearbyDuplicate(int[] nums, int k) {
+        Set set = new HashSet();
+        for (int i = 0; i < nums.length; i++) {
+            if(i > k)
+                set.remove(nums[i - k - 1]);
+            if(set.contains(nums[i])) return true;
+            set.add(nums[i]);
+        }
+        return false;
+    }
+
+    public static boolean containsNearbyDuplicate(int[] nums, int k) {
+        if (nums.length == 1) return false;
+        HashMap<Integer, String> map = new HashMap<>();
+        for (int i = 0; i < nums.length; i++) {
+            List<Integer> list = new ArrayList<>();
+            map.put(nums[i], map.getOrDefault(nums[i], "") + i + ",");
+        }
+        for (Integer a : map.keySet()){
+            List<String> list = Arrays.asList(map.get(a).split(","));
+            if(list.size() >= 2){
+                for (int i = 0; i < list.size() - 1; i++) {
+                    for (int j = i + 1; j < list.size(); j++) {
+                        if (Math.abs(Integer.valueOf(list.get(i)) - Integer.valueOf(list.get(j))) <= k) return true;
+                    }
+                }
+            }
+        }
+        return false;
     }
 
     public static int compress(char[] chars) {
@@ -553,6 +1089,118 @@ public class GeneratorSqlUtil {
             return true;
         }
         return false;
+    }
+}
+
+class H2O {
+
+    public H2O() {
+
+    }
+
+    Semaphore hSem = new Semaphore(2);
+    Semaphore oSem = new Semaphore(0);
+    private int k = 0;
+    public void hydrogen(Runnable releaseHydrogen) throws InterruptedException {
+        hSem.acquire();
+        // releaseHydrogen.run() outputs "H". Do not change or remove this line.
+        releaseHydrogen.run();
+        k++;
+        if (k%2 == 0) oSem.release();
+    }
+
+    public void oxygen(Runnable releaseOxygen) throws InterruptedException {
+        oSem.acquire();
+        // releaseOxygen.run() outputs "O". Do not change or remove this line.
+        releaseOxygen.run();
+        hSem.release();
+        hSem.release();
+    }
+}
+
+class FooBar {
+    private int n;
+
+    public FooBar(int n) {
+        this.n = n;
+    }
+
+    private Semaphore fooSem = new Semaphore(1);
+    private Semaphore barSem = new Semaphore(0);
+    public void foo() throws InterruptedException {
+
+        for (int i = 0; i < n; i++) {
+            fooSem.acquire();
+            System.out.print("foo");
+            // printFoo.run() outputs "foo". Do not change or remove this line.
+//            printFoo.run();
+            barSem.release();
+        }
+    }
+
+    public void bar() throws InterruptedException {
+        for (int i = 0; i < n; i++) {
+            barSem.acquire();
+            System.out.print("bar");
+            // printBar.run() outputs "bar". Do not change or remove this line.
+//            printBar.run();
+            fooSem.release();
+        }
+    }
+}
+
+class RunnableDemo implements Runnable {
+    private Thread t;
+    private String threadName;
+
+    RunnableDemo( String name) {
+        threadName = name;
+        System.out.println("Creating " +  threadName );
+    }
+
+    public void run() {
+        System.out.println("Running " +  threadName );
+        System.out.println("Thread " +  threadName + " exiting.");
+    }
+
+    public void start () {
+        System.out.println("Starting " +  threadName );
+        if (t == null) {
+            t = new Thread (this, threadName);
+            t.start ();
+        }
+    }
+}
+
+class ThreadDemo extends Thread {
+    private Thread t;
+    private String threadName;
+
+    ThreadDemo( String name) {
+        threadName = name;
+        System.out.println("Creating " +  threadName );
+    }
+
+    public void run() {
+        System.out.println("Running " +  threadName );
+        try {
+            for(int i = 4; i > 0; i--) {
+                System.out.println("Thread: " + threadName + ", " + i);
+                // 让线程睡眠一会
+                Thread.sleep(50);
+            }
+        }catch (InterruptedException e) {
+            System.out.println("Thread " +  threadName + " interrupted.");
+        }
+        System.out.println("Thread " +  threadName + " exiting.");
+    }
+
+    public void start () {
+        System.out.println("Starting " +  threadName );
+        if (t == null) {
+            t = new Thread (this, threadName);
+            t.start ();
+        }
     }
 }
 

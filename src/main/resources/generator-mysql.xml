@@ -76,7 +76,7 @@
 
        创建查询对象   enableCountByExample
         -->
-        <table tableName="t_projects_role" domainObjectName="ProjectsRole"
+        <table tableName="t_apply_refund" domainObjectName="ApplyRefund"
 
                enableCountByExample="true" enableDeleteByExample="true"
                enableSelectByExample="true" enableUpdateByExample="true">
