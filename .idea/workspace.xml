@@ -4,19 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4f0dc3fb-2280-4428-af49-0a2e3ce4d45c" name="Default Changelist" comment="1.打算把项目传到github">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ivorymanager/util/MyAnno.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ego-generator.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ivorymanager/mapper/ProjectsRoleMapper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ivorymanager/pojo/ProjectsRole.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ivorymanager/pojo/ProjectsRoleExample.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ivorymanager/util/GeneratorSqlUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ivorymanager/util/GeneratorSqlUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ivorymanager/xml/ProjectsRoleMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/generator-mysql.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/generator-mysql.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/ivorymanager/util/GeneratorSqlUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ivorymanager/util/GeneratorSqlUtil.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/generator-mysql.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/generator-mysql.xml" afterDir="false" />
-    </list>
+    <list default="true" id="4f0dc3fb-2280-4428-af49-0a2e3ce4d45c" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -201,7 +189,7 @@
       <workItem from="1656382764684" duration="51678000" />
       <workItem from="1657596897649" duration="3643000" />
       <workItem from="1657619110867" duration="643000" />
-      <workItem from="1657619970799" duration="8367000" />
+      <workItem from="1657619970799" duration="8669000" />
     </task>
     <task id="LOCAL-00001" summary="1.加表加字段的代码生成器">
       <created>1592452068926</created>
@@ -245,7 +233,14 @@
       <option name="project" value="LOCAL" />
       <updated>1644553911817</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="1.练手 反射和注解">
+      <created>1657704497600</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1657704497600</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -267,7 +262,8 @@
     <MESSAGE value="1.加表加字段的代码生成器" />
     <MESSAGE value="1.test" />
     <MESSAGE value="1.打算把项目传到github" />
-    <option name="LAST_COMMIT_MESSAGE" value="1.打算把项目传到github" />
+    <MESSAGE value="1.练手 反射和注解" />
+    <option name="LAST_COMMIT_MESSAGE" value="1.练手 反射和注解" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
